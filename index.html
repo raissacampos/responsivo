@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="manifest" href="manifest.webmanifest">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content='yes' name='apple-mobile-web-app-capable' />
+    <meta content='yes' name='mobile-web-app-capable' />
+    <meta name="apple-mobile-web-app-status-bar" content="#aa7700">
+    <meta name="theme-color" content="black">
+    <link rel="apple-touch-icon" href="assets/logos/icon-192x192-apple.png">
+    <title>Site responsivo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Site responsivo</h1>
+        </div>
+        <div class="content">
+            <p>Este é um exemplo de site responsivo com flexbox</p>
+            <p>O flexbox é uma propiedade CSS que permite criar layouts flexíveis e responsivos</p>
+            <p>Com o flexbox, podemos controlar a forma como os elementos são dispostos em uma página, independente do tamanho da tela.</p>
+        </div>
+        <div class="conti">
+            <p>Este é um exemplo de site responsivo com flexbox</p>
+            <p>O flexbox é uma propiedade CSS que permite criar layouts flexíveis e responsivos</p>
+            <p>Com o flexbox, podemos controlar a forma como os elementos são dispostos em uma página, independente do tamanho da tela.</p>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener("DOMContentLoaded", function (event) {
+            if ('serviceWorker' in navigator) {
+                console.log('has serviceworker');
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('serviceWorker.js')
+                        .then((registration) => {
+                            console.log('Service worker registered.', registration);
+                        });
+                });
+    
+            }
+            else {
+                console.log("Your browser not supports serviceWorkers");
+            }
+        });
+    </script>
+</body>
+</html>
